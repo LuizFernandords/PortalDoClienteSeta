@@ -123,9 +123,18 @@
   text-decoration: none;
 }
 
-.label-erro-novasenha{
+.label-erro-novasenha1{
   color: red;
   position: absolute;
+  top: -8px;
+  left: -20px;
+}
+
+.label-erro-novasenha2{
+  color: red;
+  position: absolute;
+  top: 83px;
+  left: -20px;
 }
 
 

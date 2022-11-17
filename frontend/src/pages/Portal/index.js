@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useContext} from 'react';
 import './styles.css';
 import Compras from '../../components/Compras/Compras';
 import Faturas from '../../components/Faturas/Faturas';
@@ -8,6 +8,8 @@ import Limite from '../../components/Limite/Limite';
 import Button from 'react-bootstrap/Button';
 import {useNavigate} from 'react-router-dom';
 import Modal from 'react-bootstrap/Modal';
+import StoreContext from '../../components/Store/Context'
+
 
 import {FiCreditCard, FiDollarSign, FiList, FiAward, FiShoppingCart, FiLogOut} from 'react-icons/fi'
 
@@ -20,6 +22,8 @@ export default function Portal(){
   const [exibirFinanceiro, setExibirFinanceiro] = useState(false)
   const [exibirLimite, setExibirLimite] = useState(false)
   const [nomeLogado, setNomeLogado] = useState("");
+  const {setToken} = useContext(StoreContext);
+  const {setNome} = useContext(StoreContext);
   const [show, setShow] = useState(false);
 
   function handleOpen(){
@@ -36,10 +40,10 @@ export default function Portal(){
   }
 
   function deslogar(){
-    localStorage.removeItem("token");
-    localStorage.removeItem("nome");
-      setShow(false);
-      return navigate('/');
+    setToken(null)
+    setNome(null)
+    setShow(false);
+    return navigate('/');
    }
 
   function renderCompras(){
@@ -89,7 +93,7 @@ export default function Portal(){
     <>
       <div className='panel-esquerdo-menu'>
       <div className='img-portal'></div>
-      <span class="portal-bemvindo">Olá {nomeLogado}<br/>Seja Bem-Vindo!</span>
+      <span class="portal-bemvindo">Olá {nomeLogado}<br/>Seja Bem-Vindo(a)!</span>
         <ul class="lista-menu">
           <li className='item'><button onClick={() => renderFaturas()}  class="button-menu"><FiCreditCard  color="#F3B106" size={36} /><span className='option-menu'>&nbsp;&nbsp;Faturas</span></button></li>
           <li className='item'><button onClick={() => renderLimite()} class="button-menu"><FiDollarSign size={36} color="#F3B106"/><span className='option-menu'> &nbsp;&nbsp;Consultar Limite</span></button></li>

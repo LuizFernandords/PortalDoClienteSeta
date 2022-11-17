@@ -1,4 +1,4 @@
-import React, {useState, useContext} from 'react';
+import React, {useState, useContext, useEffect} from 'react';
 import './styles.css';
 import Axios from "axios";
 import {useNavigate} from 'react-router-dom';
@@ -15,13 +15,19 @@ export default function ComponentLogin(){
   const [errorLogin, setErrorLogin] = useState("");
   const {setToken} = useContext(StoreContext);
   const {setNome} = useContext(StoreContext);
+  const {setEmail} = useContext(StoreContext);
+  const {setCodigoValido} = useContext(StoreContext);
   const navigate = useNavigate();
   const url = 'http://localhost:3000/getUserCliente/'
 
   function initialState(){
     return {cpflogin: '', senhalogin: ''};
   }
-  
+  function resetaredefinicao(){
+    setEmail(null)
+    setCodigoValido(null)
+  }
+
   const login = async (dadoslogin) => {
    const response = await Axios.post(url,{
         cpf: dadoslogin.cpflogin,
@@ -55,6 +61,7 @@ export default function ComponentLogin(){
     });
   }
 
+  useEffect(() => resetaredefinicao())
   return(
     <>
     <BarraEsquerda></BarraEsquerda>
@@ -65,7 +72,7 @@ export default function ComponentLogin(){
         <form className='form-login' onSubmit={onSubmit}>
             <IMaskInput mask="000.000.000-00" autocomplete="off" required maxLength={14} placeholder="Digite seu Cpf"  name="cpflogin" className="input-cpflogin" value={values.cpflogin} onChange={onChange}/><br/>
             <span className='label-erro-login1'>{errorLogin}</span>
-            <input autocomplete="off" type="password"  required name="senhalogin" placeholder="Digite sua Senha" onChange={onChange} value={values.senhalogin} className="input-senha"/><br/>
+            <input autocomplete="off" type="password" maxLength={12} required name="senhalogin" placeholder="Digite sua Senha" onChange={onChange} value={values.senhalogin} className="input-senha"/><br/>
             <span className='label-erro-login2'>{errorLogin}</span>
              <button type="submit" className='button-continuar'><span className='caption-button'>Continuar</span><span className="icon-login"><FiArrowRight size={16} color="#2C2C2D" /></span></button>
              <div className='links-login'>

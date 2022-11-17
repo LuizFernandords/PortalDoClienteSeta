@@ -65,7 +65,7 @@ const getUserCliente = (request, response) => {
   let cpf = request.body.cpf
   let senha = request.body.senha
   
-  pool.query("select trim(codigo) as token, INITCAP(Trim(SUBSTRING(nome,1,position(' ' in nome)))) as nome, email from pessoas where cpfcnpj = '"+cpf+"' and senha = '"+senha+"'", (error, results) => {
+  pool.query("select trim(codigo) as token, INITCAP(Trim(SUBSTRING(nome,1,position(' ' in nome)))) as nome, email from pessoas where cpfcnpj = '"+cpf+"' and senha = '"+senha+"' and cliente = 'T' limit 1", (error, results) => {
     if (error) {
       throw error
     }
@@ -163,16 +163,12 @@ const getFormasPagamentoByVenda = (request, response) =>{
   })
 }
 
-const getRedefinicaoCliente = (request, response) => {
-  
-  var cpfref = typeof(request.body.cpf) === undefined ? '' : request.body.cpf
-  var emailRedefinicao = typeof(request.body.email) === undefined ? '' : request.body.email
-  var validarcodigo = typeof(request.body.validar) === undefined ? '' : request.body.validar
-  var novasenha = typeof(request.body.novasenha) === undefined ? '' : request.body.novasenha
-  var codigorandomico =  Math.floor(Math.random() * (999999 - 1 + 1))+1
+const getValidacaoCpfRedefinicao = (request, response) => {
 
-  if(cpfref !== undefined){
-    pool.query('Select trim(email) as email, cpfcnpj as cpf from pessoas where cpfcnpj = $1', [cpfref], (error, results) => {
+  var cpfref = request.body.cpf
+  console.log(cpfref)
+
+    pool.query('Select trim(email) as email, cpfcnpj as cpf from pessoas where cpfcnpj = $1 limit 1', [cpfref], (error, results) => {
       if (error) {
         throw error
       }
@@ -183,10 +179,15 @@ const getRedefinicaoCliente = (request, response) => {
           response.status(200).send({email: email.email, cpf: email.cpf})
          })
       }
-      cpfref = undefined
 
     })
-  }else if(emailRedefinicao !== undefined){
+}
+
+const getRedefinicaoEmailCliente = (request, response) => {
+
+  var emailRedefinicao = request.body.email.replace(/"/g, '')
+  var codigorandomico =  Math.floor(Math.random() * (999999 - 1 + 1))+1
+
     pool.query("Select codigo from validacao_email_codigos_portal where utilizado = 'F' and email = '"+emailRedefinicao+"'", (error, results) => {
        if (error) {
         throw error
@@ -225,8 +226,13 @@ const getRedefinicaoCliente = (request, response) => {
       )
       .catch((err) => console.log('Erro ao enviar e-mail: ',err))
     })
-  }else if(validarcodigo !== undefined){
-    var emailValidacao = request.body.emailvalidacao
+  }
+
+  const getRedefinicaoCodigoCliente  = (request, response) => {
+    
+    var validarcodigo = request.body.validar
+    var emailValidacao = request.body.email.replace(/"/g, '')
+
     pool.query("Select codigo from validacao_email_codigos_portal where codigo_gerado = '"+validarcodigo+"' and email = '"+emailValidacao+"' and utilizado = 'F'", (error, results) => {
       if (error) {
        throw error
@@ -239,19 +245,22 @@ const getRedefinicaoCliente = (request, response) => {
         response.status(200).send(validarcodigo)
       })
      }else{
-        response.status(200).send('INVALID!')
+       response.status(200).send('INVALID!')
      }
 
     })
-  } 
-  if(novasenha !== undefined){
+  }
+
+  const getRedefinicaoNovaSenhaCliente  = (request, response) => {
     var cpfcnpj = request.body.cpf
+    var novasenha = request.body.novasenha
+  
     pool.query("update pessoas set senha = '"+novasenha+"' where cpfcnpj = '"+cpfcnpj+"'", (error, results) => {
       if (error) {
        throw error
      }
+     response.status(200).send('SUCCESS!')
     })
-  }
 }
 // const getUsers = (request, response) => {
   
@@ -315,7 +324,10 @@ getFinanceiroByCliente,
 getPontosFidelidadeByCliente,
 createCliente,
 getUserCliente,
-getRedefinicaoCliente
+getValidacaoCpfRedefinicao,
+getRedefinicaoEmailCliente,
+getRedefinicaoCodigoCliente,
+getRedefinicaoNovaSenhaCliente
 // deleteUser,
 // updateUser
 

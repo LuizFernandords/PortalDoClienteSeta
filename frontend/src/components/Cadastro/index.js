@@ -152,8 +152,8 @@ export default function Cadastro(){
               <option value="EX">Estrangeiro</option>
           </select><br/>
             <input onChange={(e)=>handle(e)} autocomplete="off" type="email" value={data.email} required id="email" placeholder="E-MAIL" className="input-email"/><br/>
-            <input onChange={(e)=>handle(e)} autocomplete="off" type="password" value={data.senha} maxLength={20} required id="senha" placeholder="SENHA" className="input-senha1"/><br/>
-            <input onChange={(e)=>handle(e)} autocomplete="off" type="password" value={data.senhaaux} maxLength={20} required id="senhaaux" placeholder="CONFIRME A SENHA" className="input-senha2"/><br/>
+            <input onChange={(e)=>handle(e)} autocomplete="off" type="password" value={data.senha} maxLength={12} required id="senha" placeholder="SENHA" className="input-senha1"/><br/>
+            <input onChange={(e)=>handle(e)} autocomplete="off" type="password" value={data.senhaaux} maxLength={12} required id="senhaaux" placeholder="CONFIRME A SENHA" className="input-senha2"/><br/>
             <label className='label-error-senha1'>{errorSenha}</label>
             <label className='label-error-senha2'>{errorSenha}</label>
             <button type="submit" className='button-finalizar'><span className='caption-buttonfinalizar'>Finalizar</span></button>

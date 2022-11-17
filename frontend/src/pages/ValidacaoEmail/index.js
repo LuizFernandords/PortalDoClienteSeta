@@ -14,7 +14,7 @@ export default function ValidacaoEmail(){
   const [errorCodigo, setErrorCodigo] = useState("");
   const {setCodigoValido} = useContext(StoreContext);
   const navigate = useNavigate();
-  const url = 'http://localhost:3000/getRedefinicaoCliente/'
+  const url = 'http://localhost:3000/getRedefinicaoCodigoCliente/'
 
   function initialState(){
     return {validacodigo: ''};
@@ -23,7 +23,7 @@ export default function ValidacaoEmail(){
   const validacodigo = async (codigo) => {
     const response = await Axios.post(url,{
       validar: codigo.validacodigo,
-      emailvalidacao: localStorage.getItem("email"),
+      email: localStorage.getItem("email"),
     })
       return response
     }
@@ -58,7 +58,7 @@ export default function ValidacaoEmail(){
     <BarraEsquerda></BarraEsquerda>
       <section className='panel-validaemail'>
       <span className="header-validaemail">Um e-mail foi enviado para<br/>validar sua conta</span>
-      <span className='email-destino'>Email: {localStorage.getItem("email")}</span>
+      <span className='email-destino'>Email: {localStorage.getItem("email").replace(/"/g, '')}</span>
         <form className='form-validaemail' onSubmit={onSubmit}>
             <IMaskInput mask="000000" autocomplete="off" required maxLength={6} placeholder="Informe o Código Enviado"  name="validacodigo" className="input-validacodigo" onChange={onChange}/><br/>
             <span className='label-erro-validaemail'>{errorCodigo}</span>

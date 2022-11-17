@@ -12,7 +12,6 @@ const RoutesPrivate = () => {
 
   return (
     
-
     token && email === null && codigovalido === null ?
       <Portal />
       : codigovalido && email && token === null ?

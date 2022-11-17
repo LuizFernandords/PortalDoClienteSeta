@@ -14,7 +14,8 @@ export default function CpfRedefinicao(){
   const [errorCpf, setErrorCpf] = useState("");
   const {setEmail} = useContext(StoreContext);
   const navigate = useNavigate();
-  const url = 'http://localhost:3000/getRedefinicaoCliente/'
+  const url = 'http://localhost:3000/getValidacaoCpfRedefinicao/'
+  const urlEmail = 'http://localhost:3000/getRedefinicaoEmailCliente/'
 
   function initialState(){
     return {cpfredefinicao:''};
@@ -39,7 +40,7 @@ export default function CpfRedefinicao(){
         localStorage.setItem('cpf', value.data.cpf)
 
         const enviaemail = async () => {
-          const response = await Axios.post(url,{
+          const response = await Axios.post(urlEmail,{
             email: localStorage.getItem("email")
           })
           return response

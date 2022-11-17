@@ -15,6 +15,8 @@ export default function ComponentLogin(){
   const [errorLogin, setErrorLogin] = useState("");
   const {setToken} = useContext(StoreContext);
   const {setNome} = useContext(StoreContext);
+  const {setEmail} = useContext(StoreContext);
+  const {setCodigoValido} = useContext(StoreContext);
   const navigate = useNavigate();
   const url = 'http://localhost:3000/getUserCliente/'
 
@@ -22,9 +24,9 @@ export default function ComponentLogin(){
     return {cpflogin: '', senhalogin: ''};
   }
   function resetaredefinicao(){
-    localStorage.removeItem("email");
-    localStorage.removeItem("codigovalido");
-    localStorage.removeItem("cpf");
+    setEmail(null)
+    setCodigoValido(null)
+    setNome(null)
   }
 
   const login = async (dadoslogin) => {

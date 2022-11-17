@@ -121,6 +121,34 @@ const Compras = () => {
       setFiltroVenda(result);
     },[search])
 
+    const data =[
+      {venda: '0000000', clientecodigo: '123', cliente: 'Luiz', vendedorcodigo: '789', vendedor: 'Antonio', condicao: 'AVISTA', data: '01/01/2020', hora: '12:00', itens: '1', total: '20,00', subtotal: '200,00', empresacodigo: '05', empresa: 'LEVE', avista: '50,00', aprazo: '20,00'}
+    ]
+
+    const headers2 =[
+      {label: "Venda", key: 'venda'},
+      {label: "Código Cliente", key: 'clientecodigo'},
+      {label: "Cliente", key: 'cliente'},
+      {label: "Vendedor Código", key: 'vendedorcodigo'},
+      {label: "Nome Vendedor", key: 'vendedor'},
+      {label: "Condição de pagamento", key: 'condicao'},
+      {label: "Data da Venda", key: 'data'},
+      {label: "Hora da Venda", key: 'hora'},
+      {label: "Qtde de itens", key: 'itens'},
+      {label: "Total", key: 'total'},
+      {label: "SubTotal", key: 'subtotal'},
+      {label: "Código da Loja", key: 'empresacodigo'},
+      {label: "Loja", key: 'empresa'},
+      {label: "Total a Vista", key: 'avista'},
+      {label: "Total a Prazo", key: 'aprazo'}
+    ]
+
+    const csvReport = {
+      filename: 'compras.xls',
+      headers: headers2,
+      data: data
+    }
+
     return( 
     <>
     <span className="Label-title">Histórico de Compras</span>
@@ -140,7 +168,7 @@ const Compras = () => {
             subHeader
             subHeaderComponent={
               <>
-              <CSVLink className="botaoExcel" data={filtroVenda} filename={"compras.csv"}><button className="btn btn-success float-left">Exportar em Excel</button></CSVLink>    
+              <CSVLink className="botaoExcel" {...csvReport} ><button className="btn btn-success float-left">Exportar em Excel</button></CSVLink>    
               <span>&nbsp;&nbsp;</span><FiSearch size={25} color="#F000000"/><span>&nbsp;&nbsp;</span>
               <div class="col-sm-9">
                 <input type="text" 
