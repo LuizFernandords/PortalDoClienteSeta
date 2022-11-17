@@ -1,0 +1,134 @@
+@font-face {
+  font-family: LexendDeca;
+  src: url(../../fonts/LexendDeca-Regular.ttf);
+}
+
+.botaoExcel{
+  margin-right: 82vh;
+  position: fixed;
+  margin-top: 2px;
+}
+
+.TabelaFaturas{
+  position: fixed;
+  top: 50%;
+  left: 40%;
+  transform: translateY(-55%);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 50%;
+  max-width: 50%;
+  height: 55%;
+  max-height: 55%;
+
+}
+
+.Label-title{
+  left: 40%;
+  top: 1%;
+  color: #26033B;
+  font-weight: 700;
+  position: fixed;
+  font-family: LexendDeca;
+  font-size: 40px;
+}
+
+.Label-subtitle{
+
+  left: 40%;
+  top: 7%;
+  color: #26033B;
+  position: fixed;
+  font-family: LexendDeca;
+  font-size: 20px;
+
+}
+
+.panel-totais{
+  position: fixed;
+  top: 85%;
+  left: 40%;
+  transform: translateY(-55%);
+  background-color: #F9F9F9;
+  border-radius: 1vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 50%;
+  max-width: 50%;
+  height: 5%;
+  max-height: 5%;
+  border-radius: 1vh;
+ 
+}
+
+.title-descontos{
+  color: #26033B;
+  font-size: 2vh;
+  font-family: LexendDeca;
+  padding: 2vh;
+}
+
+.title-juros{
+  color: #26033B;
+  font-size: 2vh;
+  font-family: LexendDeca;
+  padding: 2vh;
+}
+.title-total{
+  color: #26033B;
+  font-family: LexendDeca;
+  font-size: 3vh;
+  font-weight: 700;
+  padding: 1vh;
+}
+
+.button-pix{
+  display: block;
+  background-color: #F9F9F9;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.10));
+  border-radius: 1vh;
+  position: absolute;
+  width: 22%;
+  padding: 0.5%;
+  left: 68%;
+  border-color: transparent;
+  margin-top: 41%;
+  text-align: left;
+}
+
+.button-pix:active{
+  transform: scale(0.98);
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.15);
+  transition: all .2s;
+}
+
+.button-boleto:active{
+  transform: scale(0.98);
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.15);
+  transition: all .2s;
+}
+
+.button-boleto{
+  display: block;
+  background-color: #F9F9F9;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.10));
+  border-radius: 1vh;
+  position: absolute;
+  width: 22%;
+  padding: 0.5%;
+  left: 40%;
+  border-color: transparent;
+  margin-top: 41%;
+  text-align: left;
+}
+
+.icon-faturas{
+  position: absolute;
+  left: 380px;
+}
+
+.botaoExcel{
+  left: 4px;
+}

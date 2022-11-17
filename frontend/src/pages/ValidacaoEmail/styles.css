@@ -1,0 +1,120 @@
+@font-face {
+  font-family: LexendDeca;
+  src: url(../../fonts/LexendDeca-Regular.ttf);
+}
+
+.container{
+  position: relative;
+}
+
+.panel-validaemail{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-55%);
+  background-color: #F9F9F9;
+  border-radius: 1vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 1100px;
+  max-width: 560px;
+  height: 540px;
+  max-height: 640px;
+  border-radius: 3vh;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.boas-Vindas{
+  color: #F3B106;
+  font-family: LexendDeca;
+  font-size: 27px;
+  position: relative;
+  top: 40%;
+  left: 3%;
+  font-weight: bolder;
+}
+
+.icon-validaemail{
+  position: relative;
+  left: 220px;
+}
+
+.header-validaemail{
+  color: #26033B;
+  font-family: LexendDeca;
+  position: relative;
+  top: 16%;
+  left: 5%;
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+.email-destino{
+  color: #26033B;
+  font-family: LexendDeca;
+  position: absolute;
+  top: 35%;
+  left: 5%;
+  font-size: 15px;
+  font-weight: bolder;
+}
+
+.input-validacodigo{
+  background-color: #F9F9F9;
+  border-color: transparent;
+  border-bottom-color: #787575;
+  opacity: 0.8;
+  width: 90%;
+  top: 90px;
+  left: -25px;
+  font-size: 30px;
+  position: relative;
+}
+
+.form-validaemail{
+  position: relative;
+  top: 25%;
+  left: 10%;
+}
+
+.button-continuar-validaemail{
+  background-color: #F9F9F9;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 1vh;
+  position: relative;
+  width: 70%;
+  padding: 4%;
+  left: 5%;
+  border-color: transparent;
+  top: 150px;
+  text-align: left;
+}
+
+.button-continuar-validaemail:active{
+  transform: scale(0.98);
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+.caption-buttonfinalizar{
+  color: #fff;
+  justify-content: center;
+  display: flex;
+}
+
+.link{
+  color: #2C2C2D;
+  text-decoration: none;
+}
+.link:hover{
+  color: #6b6a6a;
+  text-decoration: none;
+}
+
+.label-erro-validaemail{
+  color: red;
+  position: absolute;
+}
+
+
+

@@ -1,0 +1,271 @@
+@font-face {
+  font-family: LexendDeca;
+  src: url(../../fonts/LexendDeca-Regular.ttf);
+}
+
+.containerCadastro{
+  position: relative;
+}
+
+.panel-cadastro{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-55%);
+  background-color: #F9F9F9;
+  border-radius: 1vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 560px;
+  max-width: 560px;
+  height: 680px;
+  max-height: 700px;
+  border-radius: 3vh;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.boas-VindasCadastro{
+  color: #F3B106;
+  font-family: LexendDeca;
+  font-size: 27px;
+  position: relative;
+  top: 40%;
+  left: 3%;
+  font-weight: bolder;
+}
+
+.header-cadastro{
+  color: #26033B;
+  font-family: LexendDeca;
+  position: relative;
+  top: 5%;
+  left: 10%;
+  font-weight: bolder;
+}
+
+.header-informativo{
+  color: #26033B;
+  font-family: LexendDeca;
+  position: relative;
+  top: 5%;
+  left: 10%;
+}
+
+.input-nome{
+  background-color: #F9F9F9;
+  border-color: transparent;
+  border-bottom-color: #787575;
+  opacity: 0.8;
+  width: 80%;
+  margin-top: -20%;
+  position: absolute;
+  text-transform: uppercase;
+}
+.label-nascimento{
+  margin-top: -13%;
+  position: absolute;
+}
+
+.input-nascimento{
+  background-color: #F9F9F9;
+  border-color: transparent;
+  border-bottom-color: #787575;
+  width: 40%;
+  opacity: 0.8;
+  margin-top: -13%;
+  position: absolute;
+}
+
+.input-cpf{
+  background-color: #F9F9F9;
+  border-color: transparent;
+  border-bottom-color: #787575;
+  width: 38%;
+  opacity: 0.8;
+  margin-top: -13%;
+  position: absolute;
+  margin-left: 43%;
+}
+
+.input-celular{
+  background-color: #F9F9F9;
+  border-color: transparent;
+  border-bottom-color: #787575;
+  width: 30%;
+  opacity: 0.8;
+  margin-top: -7%;
+  position: absolute;
+}
+
+.input-calcado{
+  background-color: #F9F9F9;
+  border-color: transparent;
+  border-bottom-color: #787575;
+  width: 10%;
+  opacity: 0.8;
+  margin-top: -7%;
+  position: absolute;
+  margin-left: 33%
+}
+
+.input-sexo{
+  background-color: #F9F9F9;
+  border-color: transparent;
+  border-bottom-color: #787575;
+  width: 10%;
+  opacity: 0.8;
+  margin-top: -6%;
+  position: absolute;
+  margin-left: 46%
+}
+
+.input-cep{
+  background-color: #F9F9F9;
+  border-color: transparent;
+  border-bottom-color: #787575;
+  width: 21%;
+  opacity: 0.8;
+  margin-top: -7%;
+  position: absolute;
+  margin-left: 60%
+}
+
+.input-rua{
+  background-color: #F9F9F9;
+  border-color: transparent;
+  border-bottom-color: #787575;
+  opacity: 0.8;
+  width: 60%;
+  margin-top: -3%;
+  position: absolute;
+  text-transform: uppercase;
+}
+
+.input-numero{
+  background-color: #F9F9F9;
+  border-color: transparent;
+  border-bottom-color: #787575;
+  opacity: 0.8;
+  width: 19%;
+  margin-top: -3%;
+  position: absolute;
+  margin-left: 62%
+}
+.label-error-senha1{
+  color: red;
+  position: relative;
+  top: 130px;
+}
+
+.label-error-senha2{
+  color: red;
+  position: relative;
+  left: -195px;
+  top: 80px;
+}
+
+.input-bairro{
+  background-color: #F9F9F9;
+  border-color: transparent;
+  border-bottom-color: #787575;
+  opacity: 0.8;
+  width: 81%;
+  margin-top: 1%;
+  position: absolute;
+  text-transform: uppercase;
+}
+
+.input-cidade{
+  background-color: #F9F9F9;
+  border-color: transparent;
+  border-bottom-color: #787575;
+  opacity: 0.8;
+  width: 65%;
+  margin-top: 10%;
+  position: absolute;
+  text-transform: uppercase;
+}
+
+.input-uf{
+  background-color: #F9F9F9;
+  border-color: transparent;
+  border-bottom-color: #787575;
+  opacity: 0.8;
+  width: 16%;
+  margin-top: 11%;
+  position: absolute;
+  margin-left: 66%
+}
+
+.input-email{
+  background-color: #F9F9F9;
+  border-color: transparent;
+  border-bottom-color: #787575;
+  opacity: 0.8;
+  width: 82%;
+  margin-top: 14%;
+  position: absolute;
+  text-transform: uppercase;
+}
+
+.input-senha1{
+  background-color: #F9F9F9;
+  border-color: transparent;
+  border-bottom-color: #787575;
+  opacity: 0.8;
+  width: 82%;
+  margin-top: 18%;
+  position: absolute;
+  text-transform: uppercase;
+}
+
+
+.input-senha2{
+  background-color: #F9F9F9;
+  border-color: transparent;
+  border-bottom-color: #787575;
+  opacity: 0.8;
+  width: 82%;
+  margin-top: 22%;
+  position: absolute;
+  text-transform: uppercase;
+}
+
+.form-cadastro{
+  position: relative;
+  top: 25%;
+  left: 10%;
+}
+
+.button-finalizar{
+  display: block;
+  background: linear-gradient(180deg, #26033B 0%, #3D0B44 100%);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 1vh;
+  position: fixed;
+  width: 30%;
+  left: 36%;
+  padding: 1.5%;
+  margin-top: 25%;
+  border-color: transparent;
+  text-align: left;
+}
+
+.link-registro{
+  color: white;
+  text-decoration: none;
+}
+.link-registro:hover{
+  color: white;
+  text-decoration: none;
+}
+
+.button-finalizar:active{
+  transform: scale(0.98);
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+
+
+

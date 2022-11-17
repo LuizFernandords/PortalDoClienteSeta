@@ -1,0 +1,98 @@
+@font-face {
+  font-family: LexendDeca;
+  src: url(../../fonts/LexendDeca-Regular.ttf);
+}
+
+.panel-esquerdo-menu{
+  background: linear-gradient(180deg, #26033B 20.1%, #26033B 22.4%, #26033B 76.27%, #410C45 100%);
+  background-attachment: fixed;
+  width: 58vh;
+  height: 100vh;
+  border-top-right-radius: 5vh;
+  border-bottom-right-radius: 20px;
+  position: fixed;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 0px 34px 34px 0px;
+}
+
+.img-portal{
+  border-radius: 30px;
+  background: #FFFFFF;
+  border: 3px solid #F3B106;
+  box-sizing: border-box;
+  height: 100px;
+  position: fixed;
+  left: 20px;
+  width: 110px;
+  top: 45px;
+  justify-content: center;
+  background-image: url(../../assets/images/leve.png);
+  background-repeat: no-repeat;
+  display: flex;
+}
+
+.item{
+  background-color: transparent;
+  border: none;
+  padding-top: 10%;
+  list-style-type: none;
+  align-items: center;
+}
+
+.lista-menu{
+  margin-top: 25%;
+  background-color: none;
+ 
+}
+.option-menu{
+  color: #F3B106;
+  font-family: LexendDeca;
+  background-color: none;
+  border: none;
+  font-size: 25px;
+  position: relative;
+  font-weight: bolder;
+  text-decoration: none;
+}
+
+.option-menu:hover{
+  color: #F3B106;
+}
+
+.option-menu:active{
+  color: #F3B106;
+}
+
+
+.button-menu{
+  background-color: transparent;
+  display: flex;
+  border: none;
+}
+
+.button-menu:hover{
+  transform: scale(1.06); 
+  transition: all .1s;
+}
+
+
+.button-menu:active{
+  transform: scale(0.99);
+}
+
+.icon-login{
+  position: absolute;
+  left: 210px;
+ 
+}
+
+.portal-bemvindo{
+  color: #F3B106;
+  font-family: LexendDeca;
+  font-size: 20px;
+  position: fixed;
+  left: 150px;
+  top: 60px;
+  font-weight: 700;
+}

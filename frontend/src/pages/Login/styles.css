@@ -1,0 +1,174 @@
+@font-face {
+  font-family: LexendDeca;
+  src: url(../../fonts/LexendDeca-Regular.ttf);
+}
+
+.container{
+  position: relative;
+}
+
+.panel-login{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-55%);
+  background-color: #F9F9F9;
+  border-radius: 1vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 1000px;
+  max-width: 360px;
+  height: 440px;
+  max-height: 440px;
+  border-radius: 3vh;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.boas-Vindas{
+  color: #F3B106;
+  font-family: LexendDeca;
+  font-size: 27px;
+  position: relative;
+  top: 40%;
+  left: 3%;
+  font-weight: bolder;
+}
+
+.header-login{
+  color: #26033B;
+  font-family: LexendDeca;
+  position: relative;
+  top: 20%;
+  left: 10%;
+  font-weight: bolder;
+}
+
+.input-cpflogin{
+  background-color: #F9F9F9;
+  border-color: transparent;
+  border-bottom-color: #787575;
+  opacity: 0.8;
+  width: 80%;
+ 
+}
+
+.input-senha{
+  background-color: #F9F9F9;
+  border-color: transparent;
+  border-bottom-color: #787575;
+  width: 80%;
+  opacity: 0.8;
+  top: -1vh;
+  position: relative;
+}
+
+.img-loja{
+  border-radius: 30px;
+  background: #FFFFFF;
+  border: 3px solid #F3B106;
+  box-sizing: border-box;
+  bottom: 89.77%;
+  position: fixed;
+  left: 120px;
+  right: 120px;
+  top: -45px;
+  justify-content: center;
+  background-image: url(../../assets/images/leve.png);
+  background-repeat: no-repeat;
+  display: flex;
+}
+
+.form-login{
+  position: relative;
+  top: 25%;
+  left: 10%;
+}
+
+.button-continuar{
+  
+  background-color: #F9F9F9;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 1vh;
+  position: absolute;
+  width: 70%;
+  padding: 4%;
+  left: 5.4%;
+  border-color: transparent;
+  margin-top: 15%;
+  text-align: left;
+}
+
+.button-continuar:active{
+  transform: scale(0.98);
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+.link-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.label-senhaLogin{
+  color: #2C2C2D;
+  margin-left: 66px;
+  margin-top: 196px;
+  position: absolute;
+  text-decoration: none;
+  box-shadow: none;
+  border: none;
+  background-color: transparent;
+}
+
+.label-cadastroLogin{
+  color: #2C2C2D;
+  margin-left: 61px;
+  margin-top: 190px;
+  position: absolute;
+  text-decoration: none;
+  border: none;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.caption-buttonfinalizar{
+  color: #fff;
+  justify-content: center;
+  display: flex;
+}
+
+.label-senhaLogin:hover{
+  color: #6b6a6a;
+  align-items: center;
+}
+
+.label-cadastroLogin:hover{
+  color: #6b6a6a;
+  align-items: center;
+}
+
+.icon-login{
+  position: absolute;
+  left: 210px;
+}
+
+.link{
+  color: #2C2C2D;
+  text-decoration: none;
+}
+.link:hover{
+  color: #6b6a6a;
+  text-decoration: none;
+}
+
+.label-erro-login1{
+  color: red;
+  position: absolute;
+}
+.label-erro-login2{
+  color: red;
+  position: absolute;
+}
+
+

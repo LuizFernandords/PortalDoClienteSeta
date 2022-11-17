@@ -1,0 +1,158 @@
+@font-face {
+  font-family: LexendDeca;
+  src: url(../../fonts/LexendDeca-Regular.ttf);
+}
+
+.Label-title{
+  left: 40%;
+  top: 8%;
+  color: #26033B;
+  font-weight: 700;
+  position: fixed;
+  font-family: LexendDeca;
+  font-size: 40px;
+}
+
+.Label-subtitle{
+
+  left: 40%;
+  top: 15%;
+  color: #26033B;
+  position: fixed;
+  font-family: LexendDeca;
+  font-size: 20px;
+
+}
+
+.panel-limitetotal{
+  position: fixed;
+  top: 40%;
+  left: 40%;
+  transform: translateY(-55%);
+  background-color: #F9F9F9;
+  border-radius: 1vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 20%;
+  max-width: 20%;
+  height: 30%;
+  max-height: 30%;
+  border-radius: 3vh;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.panel-limiteutilizado{
+  position: fixed;
+  top: 40%;
+  left: 66%;
+  transform: translateY(-55%);
+  background-color: #F9F9F9;
+  border-radius: 1vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 25%;
+  max-width: 25%;
+  height: 30%;
+  max-height: 30%;
+  border-radius: 3vh;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+
+.panel-limitedisponivel{
+  position: fixed;
+  top: 75%;
+  left: 40%;
+  transform: translateY(-55%);
+  background-color: #F9F9F9;
+  border-radius: 1vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 52%;
+  max-width: 52%;
+  height: 30%;
+  max-height: 30%;
+  border-radius: 3vh;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.panel-titleutilizado{
+
+  left: 8%;
+  top: 18%;
+  font-size: 50px;
+  color: #26033B;
+  font-weight: 700;
+  position: fixed;
+  font-family: LexendDeca;
+
+}
+
+.panel-titletotal{
+
+  left: 12%;
+  top: 18%;
+  font-size: 50px;
+  color: #26033B;
+  font-weight: 700;
+  position: fixed;
+  font-family: LexendDeca;
+
+}
+
+.panel-texttotal{
+
+  position: fixed;
+  top: 50%;
+  left: 13%;
+  font-size: 50px;
+  color: #26033B;
+  font-weight: 700;
+  position: fixed;
+  font-family: LexendDeca;
+
+}
+
+
+.panel-textutilizado{
+
+  position: fixed;
+  top: 50%;
+  left: 15%;
+  font-size: 50px;
+  color: #26033B;
+  font-weight: 700;
+  position: fixed;
+  font-family: LexendDeca;
+
+}
+
+
+
+.panel-titledisponivel{
+
+  left: 28%;
+  top: 18%;
+  font-size: 50px;
+  color: #26033B;
+  font-weight: 700;
+  position: fixed;
+  font-family: Lexend Deca, sans-serif;
+
+}
+
+.panel-textdisponivel{
+
+  position: fixed;
+  top: 50%;
+  left: 35%;
+  font-size: 50px;
+  color: #26033B;
+  font-weight: 700;
+  position: fixed;
+  font-family: Lexend Deca, sans-serif;
+
+}

@@ -1,0 +1,91 @@
+@font-face {
+  font-family: LexendDeca;
+  src: url(../../fonts/LexendDeca-Regular.ttf);
+}
+
+.TabelaFinanceiro{
+  position: fixed;
+  top: 55%;
+  left: 40%;
+  transform: translateY(-55%);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 50%;
+  max-width: 50%;
+  height: 55%;
+  max-height: 55%;
+
+}
+
+.Label-title{
+  left: 40%;
+  top: 3%;
+  color: #26033B;
+  font-weight: 700;
+  position: fixed;
+  font-family: LexendDeca;
+  font-size: 40px;
+}
+
+.Label-subtitle{
+
+  left: 40%;
+  top: 10%;
+  color: #26033B;
+  position: fixed;
+  font-family: LexendDeca;
+  font-size: 20px;
+
+}
+
+.panel-totaisFinanceiro{
+  position: fixed;
+  top: 90%;
+  left: 40%;
+  transform: translateY(-55%);
+  background-color: #F9F9F9;
+  border-radius: 1vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 50%;
+  max-width: 50%;
+  height: 5%;
+  max-height: 5%;
+  border-radius: 1vh;
+ 
+}
+
+.title-descontosFinanceiro{
+  color: #26033B;
+  font-size: 2vh;
+  font-family: LexendDeca;
+  padding: 2vh;
+}
+
+.title-jurosFinanceiro{
+  color: #26033B;
+  font-size: 2vh;
+  font-family: LexendDeca;
+  padding: 2vh;
+}
+
+.title-acrescimoFinanceiro{
+  color: #26033B;
+  font-size: 2vh;
+  font-family: LexendDeca;
+  padding: 2vh;
+} 
+
+.title-totalFinanceiro{
+  color: #26033B;
+  font-family: LexendDeca;
+  font-size: 3vh;
+  font-weight: 700;
+  padding: 1vh;
+}
+
+.botaoExcel{
+  left: 4px;
+}

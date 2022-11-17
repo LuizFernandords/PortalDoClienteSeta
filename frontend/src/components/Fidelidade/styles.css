@@ -1,0 +1,139 @@
+@font-face {
+  font-family: LexendDeca;
+  src: url(../../fonts/LexendDeca-Regular.ttf);
+}
+
+.Label-title{
+  left: 40%;
+  top: 8%;
+  color: #26033B;
+  font-weight: 700;
+  position: fixed;
+  font-family: LexendDeca;
+  font-size: 40px;
+}
+
+.Label-subtitle{
+
+  left: 40%;
+  top: 15%;
+  color: #26033B;
+  position: fixed;
+  font-family: LexendDeca;
+  font-size: 20px;
+
+}
+
+.panel-fidelidadepontos{
+  position: fixed;
+  top: 40%;
+  left: 40%;
+  transform: translateY(-55%);
+  background-color: #F9F9F9;
+  border-radius: 1vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 20%;
+  max-width: 20%;
+  height: 30%;
+  max-height: 30%;
+  border-radius: 3vh;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.panel-fidelidadevalor{
+  position: fixed;
+  top: 40%;
+  left: 66%;
+  transform: translateY(-55%);
+  background-color: #F9F9F9;
+  border-radius: 1vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 25%;
+  max-width: 25%;
+  height: 30%;
+  max-height: 30%;
+  border-radius: 3vh;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+
+
+
+.panel-titlefidelidadepontos{
+  left:80%;
+  top: 20%;
+  width: 100%;
+  font-size: 40px;
+  position:relative;
+  color: #26033B;
+  font-weight: 700;
+  position: fixed;
+  font-family: LexendDeca;
+  transform:translate(-50%,-50%)
+
+}
+
+
+.panel-titlefidelidadevalor{
+  font-size: 40px;
+  color: #26033B;
+  font-weight: 700;
+  font-family: LexendDeca;
+  width: 100%;
+  position:relative;
+  left:64%;
+  top: 20%;
+  transform:translate(-50%,-50%)
+}
+
+.panel-textpontos{
+
+  left:82%;
+  top: 60%;
+  width: 100%;
+  font-size: 40px;
+  position:relative;
+  color: #26033B;
+  font-weight: 700;
+  position: fixed;
+  font-family: LexendDeca;
+  transform:translate(-50%,-50%)
+
+}
+
+.panel-textvalorpontos{
+
+  font-size: 40px;
+  color: #26033B;
+  font-weight: 700;
+  font-family: LexendDeca;
+  width: 100%;
+  position:relative;
+  left:66%;
+  top: 40%;
+  transform:translate(-50%,-50%)
+
+}
+
+.info-pontos{
+  position: fixed;
+  top: 65%;
+  left: 40%;
+  font-size: 25px;
+  color: #26033B;
+  font-weight: 700;
+  position: fixed;
+  font-family: LexendDeca;
+  background-color: #F9F9F9;
+  padding: 2%;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 1vh;
+  width: 51%;
+
+}
+
+
